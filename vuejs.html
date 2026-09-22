@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vue.js</title>
+
+    <link rel="stylesheet" href="/vuejs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="nav-left">
+
+            <a href="#" class="brand">
+
+                <span class="vue-mark">V</span>
+
+                <span>Vue.js</span>
+
+            </a>
+
+
+            <a href="#" class="search">
+
+                <span class="search-icon">
+                    <button><i class="bi bi-search"></i></button>
+                </span>
+                <span>Search</span>
+                <kbd>Ctrl K</kbd>
+
+            </a>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="#"> Docs</a>
+
+            <a href="#">Playground</a>
+
+            <a href="#">Ecosystem</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Support</a>
+
+        </nav>
+
+
+        <div class="nav-icons">
+
+            <span class="language">
+                <button><i class="bi bi-translate"></i></button>
+            </span>
+
+            <span class="divider"></span>
+
+            <button class="theme">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+
+            <span class="github">
+                <button><i class="bi bi-github"></i></button>
+            </span>
+
+            <span class="x-icon">
+            <button><i class="bi bi-twitter-x"></i></button>
+            </span>
+
+            <span class="discord">
+                <button><i class="bi bi-discord"></i></button>
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="hero">
+
+            <h1>
+                <span>The Progressive</span>
+                <span>JavaScript Framework</span>
+            </h1>
+
+
+            <p>
+                An approachable, performant and versatile framework
+                for building web user interfaces.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn primary">
+
+                    <span class="play">▶</span>
+
+                    Why Vue
+
+                </a>
+
+
+                <a href="#" class="btn">
+
+                    Get Started
+
+                    <span>→</span>
+
+                </a>
+
+
+                <a href="#" class="btn">
+
+                    Install
+
+                </a>
+
+
+                <a href="#" class="btn security">
+
+                    Get Security Updates for Vue 2
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+
+        <div class="sponsor-banner">
+
+            Special Sponsor slot is now vacant - Inquire now
+
+        </div>
+
+
+
+
+        <section class="features">
+
+
+            <div class="feature">
+
+                <h2>
+                    <span>V</span>ersatile
+                </h2>
+
+                <p>
+                    A rich, incrementally adaptable ecosystem
+                    that scales between a library and a
+                    full-featured framework.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h2>
+                    <span>U</span>ser-friendly
+                </h2>
+
+                <p>
+                    Builds on top of standard HTML, CSS and
+                    JavaScript with intuitive API and world-class
+                    documentation.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h2>
+                    <span>E</span>fficient
+                </h2>
+
+                <p>
+                    Truly reactive, compiler-optimized rendering
+                    system that rarely requires manual
+                    optimization.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="sponsors">
+
+
+
+            <h2 class="section-title">
+                Platinum Sponsors
+            </h2>
+
+
+            <div class="platinum-grid">
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/vuemastery.avif" alt="Vue Mastery">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/vehikl.avif" alt="Vehikl">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAABrCAMAAAAPWwbSAAADAFBMVEVMaXEAAAAZGRkAAAAAAAARERAHBwcAAAAAAAAhIRwqKyoBAQH//v6R6o82NTUBAQEhLicKCgooHygBAQECAgIKCgrbJYwPDw88OToDAwMKCgoYGBgCAgIREREyMTEMDAwZGRkDAwMNDQ0FBQUsJSsCAgIGBgYBAQEuLy4kJCQAAAACAgIKCgooKCgWFhYLCwsFBQUGBgYPDw8WFhYGBgYICAgjJSMpLSsTExMKCgoFBQUEBARyb28ICAgKCgogICDIzMZOSkwFBQUyMjIPDw8QEBACAgIEBAQKCgoEBAQ7LTQFBQUDAwMGBgYPDw8KCgoLCwt4/HXgJIgwQjAMDAxLN0E1TzVvyWg7XDoGBgZs2mr9+vm/HnRJg0gZGRlmmGWlJGm0JHHdJIZivV9mKkoNDQ1r2mgkLinOMIQwNzAxMTGCg4I/RDx5/XXhI4jRIoDcI4bhJIl4/HVv52zhI4j4+PjMJX549nV08nF4+3R083FDbEJCTULOJYLoydpRVlG9w7319fWura5183LlI4tNTU1SQkgiIiLgI4goKCg4KTGXuJYyOzKZk5XQn7nUz9FmyWM1KzArKyuMLl7FxcRQkU95/nZiwmDFJXo8WDvl5eV3NVRq1WdlWV5JfEhlh2RjwmB8KlUSEhL///8AAAD///7pdAibTAnncwcDAwMwLi/pdQstLC3////+/P3mawDndAn9/v38/Pz//f8tLi3+/fzocAL+/PspJimXSAYpLyuVQgCcTg0gICAmLCnrehGydEDphyx8J1RvJU1Rjk+VIl/pfx7ytHz4wd7tl0n0u4dUmlPMcyRLKzz86PRZp1ft/+2GIlf88ejz1Lj438jsaq/MHnpDIzT1oc5v1m118nKj9qGyay+tYSFgJUTL/8pv5W3QJYDxqmijWh34r9bVQ5H3y6PxksXf/t5ny2X66NnWiENgsF7mN5T1wpKdVBc5JS/+0OmR6o+BNV6I4IZ8tXvXt5zInXjCez6/il63RoLxfbvrTKDD8MKzdZa4+7aZymT0AAAA/3RSTlMA/SH0/QID/vsBBsv+Ajvn/kr+6tY/Ai4S5FIX2xALXibSNX3+i6Lw/BT4sk40U1amuTqtdoL+/HVwq8MHiHodBSGYPlpF3/eQx/22vZKZbGH//v5nGf4Y/Jwo+f7+Zg78/qj9/rJE/RT+3+fx7l1K7TXZc8XqeFiPyp/8Lyj+9ujh4rqK1uT03Ix9/l74/vBjo+q07cGxmNGj29ru+OP+1FHV//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////47fS0aAAAACXBIWXMAAAsTAAALEwEAmpwYAAAgAElEQVR42u19e3wU1dn/d3Yu2dmwSVjCRSIhhLuA4rWvFosWaX3rq7afghSwsD/PlLjaCr6KAiX4e4lFRKh4HUjn+A6pgIj19VL7s60ICIoW5aJguAiGQCA3IMlCJpnLzu+P2U12Nzub4NtP2/jh/EOYMzM7c77nec7zfJ/nPANcbBfbxXaxXWwX28V2sV1s357GfNMLxba/tIuj+K8HksihhYtHRjR7ArUXx/JfBSSRQxgA4L+6LwCgJ/C6g08fhC/K1D8fJAch/+0DzCERiEeOIBdAf/RuwfEWdvcWQPRfxOmfC5IfYWBKATts1BuHrf/TMg/AUiAAmPqLJT1PvOTpkV0C9PlX13tiN1xGmQuAaEpBjwrd2FOLAIfFPrT0AHAOiCxC9tgNyqBm+m9f6qu6DJNo2QAAo0MPz9gAGFbjkeKMtoPOaR1eSI//n2ADYGyj7c567LjxrQPJjzCmFRResWLSrAC32LPsifk/yTyAPABVGHH+f56Y/0hkUfbB17PP/zeT/fS/rDTxBoDJw/FheTUAQf9WgSRyYcwa+9OHe2wIcIuz+L8dzzvZN9L/FM4B6IFLTnpq+lcNuM5oWpR9sPSSl3oZz6BPF9amAl3LQ1VeVWtzck/vvlV5qBK9pmOjIKM6rnMkWwUAaG2+Sq9Kcdu8s3FH83pW5aEqT9gFB5WrMnt89G+oaCr0W9r27gNTF0DyhzFt3ITHp8wo3TSh59/sqt7MoSmNAJAFoAkAQncO61Wex1xnNC2qfvVVq5f1NPp0IkyC3n+Z89eyzxMGS9QKqhUAwGNflzkC8PgXfJu+Mno/7fyxavOgkpR3fuRk7H6CfvkjAIDirwGI2pj8qe2nFV9+ent3kSSuC2I0bty9J1a+c3ufHpP+wAz59E0ZY5ENOAtCFhhgnd2ENXde8zrzk6zF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r01x+drUtx0cuy/joPRRc/T/D6iFh+IeaOb4z8fan/iPxGqrsBjt9N4/antiNKx5lNPROuZouhdyHohLrXU6b/4wpt34UfMvfsktf3vKJfX0N55jQlVDgrYLDSzPfXeJMWd5C5443NQl63fyGac2UE6HrbQLd+wEcO31yijn38dTXV4weCeAayObIZoGRjZezu3RctFU6Lc+DieqemF4n50Arg1sjD+Wclpfu796PBe7b3Qy3RTzQq8NbBvVXs5oYLilOqGMDj/C+ZnNHbzJfs5l1waGOy+2vzrFT/dztOnAI83fDCSIXBjTbsx4964eTYuyx06Z9faKpzO4lfjROgDoadtHc3c+wM9vwvKWhaHipuju739gc37Q13PIV2wlgP/NV347WFvpzC/B5v4htVW6+EENP8KYcj2/reeEeUsXInvshmFfIfDpKTy07hoEnsB8pnGxrwXvF8yLQDSNrg5tCmMgroPTXM8AEI0cREdJtGLWnNBx237b/Toe67AKJd034VQj8apkgPjUh+PeNN37IE1nl7964kcYmHad+IV1WwsQwaJoIlojsBi+Fnj/NPAv2/R/vBQlEW/drGrQ31WSHKVnasDMATn+0u+8H79OLLxvzQzj+SojodDZxfZPAcnRMQYA5J+4+d8/H+3kI3ie9AjHXRTNxfZPAMnRnUxHeRFwEaF/JZAc7W/GXfgPsnEutovtYrvYLraL7WK72C62i+3b0P4/tONUDCrNNboAAAAASUVORK5CYII="
+                        alt="Vue.js Amsterdam">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/storyblok.png" alt="Storyblok">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/chrome_frameworks_fund.png" alt="Vue School">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/javascript_certification.png?v2"
+                        alt="JavaScript Weekly">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/coderabbit_.png" alt="CodeRabbit">
+
+                </a>
+
+
+                <!-- 8 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZh95iZRcCqM3uyVPpn24G25Dt0UgQv5OY7muArrXdKL6TTF0g1kSdN4A&s=10" alt="ImageKit">
+
+                </a>
+
+
+                <!-- 9 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/greptile.png" alt="Greptile">
+
+                </a>
+
+
+                <!-- 10 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/serpapi.png" alt="SerpApi">
+
+                </a>
+
+
+                <!-- 11 -->
+                <a href="#" class="sponsor sponsor-empty">
+
+                    Become a Sponsor
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= GOLD ================= -->
+
+            <h2 class="section-title gold-title">
+                Gold Sponsors
+            </h2>
+
+
+            <div class="gold-grid">
+
+
+                <!-- 1 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/tidelift.png" alt="Tidelift">
+
+                </a>
+
+
+                <!-- 2 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/laravel.png" alt="Laravel">
+
+                </a>
+
+
+                <!-- 3 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHyNsmQV74zuzfNS3AUQuda2qRsJzDhDx_swXFoPT1lg&s" alt="Fenêtre">
+
+                </a>
+
+
+                <!-- 4 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe7Ah0P2gHeTBf-U5mw0u5sKDRix_Nd1WNSiXS2wJxcQ&s=10" alt="Fathom Analytics">
+
+                </a>
+
+
+                <!-- 5 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/sentry.png" alt="Sentry">
+
+                </a>
+
+
+                <!-- 6 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST8viFQCMZPI2FSahUlgk4KhYtHujAPHwswbib8PoK1A&s=10" alt="Certible">
+
+                </a>
+
+
+                <!-- 7 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/quickbooks_tool_hub.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 8 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/crisp.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 9 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/goread_io.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 10 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/poprey___buy_instagram_likes.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 11 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/it_m.avif" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 12 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/blastup.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 13 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/buy_instagram_followers_twicsy.png" alt="Twicsy">
+
+                </a>
+
+
+                <!-- 14 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/socialboosting.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 15 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/buy_instagram_followers___likes.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 16 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/buy_instagram_followers_from_socialwick.png"
+                        alt="Sponsor">
+
+                </a>
+
+
+                <!-- 17 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/fun88_thailand.png" alt="FUN88">
+
+                </a>
+
+
+                <!-- 18 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/fun88_thailand.png" alt="FUN88">
+
+                </a>
+
+
+                <!-- 19 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/buy_fans.png" alt="Buy Fans">
+
+                </a>
+
+
+                <!-- 20 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/fortuna.png" alt="Fortuna">
+
+                </a>
+
+
+                <!-- 21 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/stormlikes.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 22 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/fun88_thailand.png" alt="FUN88">
+
+                </a>
+
+
+                <!-- 23 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/views4you.png" alt="Views 4 You">
+
+                </a>
+
+
+                <!-- 24 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/ok_win.png" alt="OK.Win">
+
+                </a>
+
+
+                <!-- 25 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/jbo.png">
+
+                </a>
+
+
+                <!-- 26 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/jbo.png" alt="JBO Thailand">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/buy_facebook_followers.png" alt="Sponsor">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/tik_ninja.png" alt="Sponsor">
+
+                </a>
+
+
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/instant_famous.png" alt="Sponsor">
+
+                </a>
+
+
+                <!-- 30 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/fortuna.png" alt="Fortuna">
+
+                </a>
+
+
+                <!-- 31 -->
+                <a href="#" class="sponsor">
+
+                    <img src="https://automation.vuejs.org/images/bairesdev.png" alt="Sponsor">
+
+                </a>
+
+
+                <a href="#" class="sponsor sponsor-empty">
+
+                    Become a Sponsor
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-grid">
+
+
+            <div class="footer-column">
+
+                <h3>Docs</h3>
+
+                <a href="#">Quick Start</a>
+                <a href="#">Guide</a>
+                <a href="#">Tutorial</a>
+                <a href="#">Examples</a>
+                <a href="#">API</a>
+                <a href="#">Glossary</a>
+                <a href="#">Error Reference</a>
+                <a href="#">Vue 2 Docs ↗</a>
+                <a href="#">Migration from Vue 2 ↗</a>
+
+
+                <h3 class="footer-subtitle">
+                    About
+                </h3>
+
+                <a href="#">FAQ</a>
+                <a href="#">Team</a>
+                <a href="#">Releases</a>
+                <a href="#">Community Guide</a>
+                <a href="#">Code of Conduct</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">The Documentary ↗</a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>Support</h3>
+
+                <a href="#">Sponsor</a>
+                <a href="#">Partners</a>
+
+
+                <h3 class="footer-subtitle">
+                    Resources
+                </h3>
+
+                <a href="#">Themes</a>
+                <a href="#">UI Components ↗</a>
+                <a href="#">Plugins Collection ↗</a>
+                <a href="#">Certification ↗</a>
+                <a href="#">Jobs ↗</a>
+                <a href="#">T-Shirt Shop ↗</a>
+
+
+                <h3 class="footer-subtitle">
+                    Official Libraries
+                </h3>
+
+                <a href="#">Vue Router ↗</a>
+                <a href="#">Pinia ↗</a>
+                <a href="#">Tooling Guide</a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>Video Courses</h3>
+
+                <a href="#">Vue Mastery ↗</a>
+                <a href="#">Vue School ↗</a>
+
+
+                <h3 class="footer-subtitle">
+                    Help
+                </h3>
+
+                <a href="#">Discord Chat ↗</a>
+                <a href="#">GitHub Discussions ↗</a>
+                <a href="#">DEV Community ↗</a>
+
+
+                <h3 class="footer-subtitle">
+                    News
+                </h3>
+
+                <a href="#">Blog ↗</a>
+                <a href="#">Twitter ↗</a>
+                <a href="#">Events ↗</a>
+                <a href="#">Newsletters</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="copyright">
+
+            <p>
+                Released under the MIT License.
+            </p>
+
+            <p>
+                Copyright © 2014-2026 Evan You
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
